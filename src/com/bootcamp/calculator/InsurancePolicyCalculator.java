@@ -1,4 +1,7 @@
-package com.bootcamp;
+package com.bootcamp.calculator;
+
+import com.bootcamp.formula.Formula;
+import com.bootcamp.vehicle.Vehicle;
 
 public final class InsurancePolicyCalculator {
 

@@ -1,4 +1,4 @@
-package com.bootcamp;
+package com.bootcamp.vehicle;
 
 public final class Car extends Vehicle {
     private String transmission = "manual";

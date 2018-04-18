@@ -1,4 +1,6 @@
-package com.bootcamp;
+package com.bootcamp.formula;
+
+import com.bootcamp.vehicle.Vehicle;
 
 public final class TipperBasicFormula implements Formula {
     @Override

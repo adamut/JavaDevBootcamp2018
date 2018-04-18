@@ -1,4 +1,4 @@
-package com.bootcamp;
+package com.bootcamp.vehicle;
 
 public final class Bus extends Vehicle {
     private int numberOfSeats;
