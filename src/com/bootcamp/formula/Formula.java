@@ -4,7 +4,7 @@ import com.bootcamp.vehicle.Vehicle;
 
 public enum Formula {
 
-    BUS_FORMULA {
+    BUS_BASIC_FORMULA {
         @Override
         public int calculate(Vehicle vehicle) {
             int cost = 200 * vehicle.getAge();
@@ -14,7 +14,7 @@ public enum Formula {
             return cost;
         }
     },
-    CAR_FORMULA {
+    CAR_BASIC_FORMULA {
         @Override
         public int calculate(Vehicle vehicle) {
             int cost = 100 * vehicle.getAge();
@@ -23,7 +23,7 @@ public enum Formula {
             return cost;
         }
     },
-    TIPPER_FORMULA {
+    TIPPER_BASIC_FORMULA {
         @Override
         public int calculate(Vehicle vehicle) {
             int cost = 300 * vehicle.getAge();
