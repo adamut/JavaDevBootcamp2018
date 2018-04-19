@@ -1,10 +1,7 @@
 package com.bootcamp;
 
 import com.bootcamp.calculator.InsurancePolicyCalculator;
-import com.bootcamp.formula.BusBasicFormula;
-import com.bootcamp.formula.CarBasicFormula;
 import com.bootcamp.formula.Formula;
-import com.bootcamp.formula.TipperBasicFormula;
 import com.bootcamp.vehicle.Bus;
 import com.bootcamp.vehicle.Car;
 import com.bootcamp.vehicle.Tipper;
@@ -18,17 +15,23 @@ public class MainApp {
         final Vehicle petersTipper = new Tipper(6, 80000, false, 15);
         final InsurancePolicyCalculator calculator = InsurancePolicyCalculator.INSTANCE;
 
-        final Formula carBasicFormula = new CarBasicFormula();
-        final Formula busBasicFormula = new BusBasicFormula();
-        final Formula tipperBasicFormula = new TipperBasicFormula();
+        final String inputString = "Ana has apples!";
 
-        final int joesInsurancePolicyCost = calculator.calculate(joesCar,carBasicFormula);
-        final int stevesInsurancePolicyCost = calculator.calculate(stevensBus,busBasicFormula);
-        final int petersInsurancePolicyCost = calculator.calculate(petersTipper,tipperBasicFormula);
+      /*  System.out.println(applyStringFunction(StringFunction.TO_UPPER_FUNCTION, inputString));
+        System.out.println(applyStringFunction(StringFunction.TO_LOWER_FUNCTION, inputString));
+        System.out.println(applyStringFunction(StringFunction.TO_CHAR_FUNCTION, inputString));
 
-        System.out.println("Joe's policy cost is :" + joesInsurancePolicyCost);
-        System.out.println("Steve's policy cost is :" + stevesInsurancePolicyCost);
-        System.out.println("Peter's policy cost is :" + petersInsurancePolicyCost);
+      */
+        System.out.println("Joe's policy cost is :" + calculator.calculate(stevensBus, Formula.BUS_FORMULA));
+        System.out.println("Steve's policy cost is :" + calculator.calculate(joesCar, Formula.CAR_FORMULA));
+        System.out.println("Peter's policy cost is :" + calculator.calculate(petersTipper, Formula.TIPPER_FORMULA));
+    }
 
+    private static String applyStringFunction(StringFunction stringFunction, String input) {
+        return stringFunction.appy(input);
+    }
+
+    private static int applyCalculateFormula(Formula formula, Vehicle vehicle) {
+        return formula.calculate(vehicle);
     }
 }
